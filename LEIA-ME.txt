@@ -1,0 +1,51 @@
+PLANETA REGGAE — FUNDO HALLOWEEN / XATFRAME
+
+Arquivos prontos para hospedagem estática. Não há etapa de build, dependências,
+controles, anúncios, marca d'água nem chat embutido no xatframe final.
+
+ARQUIVOS DO XATFRAME
+  index.html     Página limpa usada como fundo externo no xat.
+  style.css      Layout, identidade e animações leves.
+  brand.css      Nome maior com a fonte de Halloween Nosifer.
+  planeta-reggae-logo.svg Nome em contornos vetoriais da fonte Nosifer.
+  fog.css        Camadas de fumaça lenta e ondulante.
+  bats.css       Aparência dos morcegos articulados.
+  bats.js        Trajetórias curvas, inclinação do corpo e bater de asas.
+  effects.js     Estrelas e brasas discretas; pausa quando a página fica oculta.
+  scene-clear.png Arte de Halloween sem fumaça fixa.
+  fog-bank.png   Textura de fumaça transparente que se move para a direita.
+  fonts/         Fontes Nosifer e Creepster locais e licenças SIL Open Font License.
+
+PRÉVIA LOCAL
+  Abra previa.html ou index.html para visualizar somente o fundo animado.
+  As duas páginas são iguais: não há menus, botões, legendas ou chat simulado.
+
+COMO USAR NO XAT
+  1. Hospede index.html, todos os arquivos CSS/JS, scene-clear.png, fog-bank.png,
+     planeta-reggae-logo.svg
+     e a pasta fonts juntos
+     em uma hospedagem estática acessível por HTTPS, preservando os caminhos.
+  2. Use a URL HTTPS da página index.html no campo “xatframe” do grupo.
+     O xatframe recebe o endereço da página HTML, e não o endereço de scene.png.
+  3. No xat, o chat real aparece por cima do fundo. Se desejar enxergar a arte
+     através do chat, ajuste a opção de fundo interno transparente do grupo.
+
+Se o provedor adicionar cabeçalhos que proíbam iframe (X-Frame-Options ou
+CSP frame-ancestors), ajuste a hospedagem para permitir incorporação no xat.
+
+LAYOUT E EFEITOS
+  Composição responsiva com imagem centralizada e fundo cobrindo a janela.
+  O nome fica no centro do chat interno, deslocado 50 px para a direita.
+  Referência: chat central de 728 × 486 px, começando em y=148 px.
+  O título não tem subtítulo, menu, legenda ou mensagens de demonstração.
+  A fumaça está separada da imagem de fundo. As duas camadas se movem
+  continuamente apenas para a direita, a 9 e 10 px/s, sem voltar ou parar.
+  Morcegos com asas articuladas, trajetórias curvas e variações de altura.
+  Nome maior na fonte Nosifer, com letras escorridas de Halloween e sem subtítulo.
+  Estrelas, brasas nas laterais e brilho discreto.
+  Os efeitos pausam quando a aba fica oculta. Os demais efeitos respeitam
+  a preferência de movimento reduzido; a fumaça lenta solicitada permanece
+  ativa enquanto a página está visível.
+
+Este pacote foi preparado localmente. Nenhuma publicação ou alteração nos
+grupos Ajuda/AltaVibe foi feita.

@@ -1,0 +1,98 @@
+/* The mist is a separate transparent texture: only the moving layers contain fog. */
+.fog {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  width: 100%;
+  height: clamp(160px, 35vh, 380px);
+  overflow: hidden;
+  opacity: .58;
+  background: none;
+  filter: none;
+  transform: none;
+  animation: none;
+  will-change: auto;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 28%, #000 88%, transparent);
+}
+
+.fog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-image: url("fog-bank.png");
+  background-repeat: repeat-x;
+  background-size: 1152px 100%;
+  background-position: 0 bottom;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-size: 1152px 100%;
+  mask-size: 1152px 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  filter: blur(1.5px);
+  transform: none;
+  animation: fog-flow-right-back 128s linear -34s infinite normal;
+  will-change: background-position;
+}
+
+/* Remove the earlier radial-gradient wisps, which barely moved and reversed. */
+.fog::after {
+  content: none;
+  display: none;
+  background: none;
+  animation: none;
+}
+
+.fog--front {
+  left: 0;
+  width: 100%;
+  bottom: -44px;
+  height: clamp(145px, 29vh, 310px);
+  opacity: .37;
+  filter: none;
+  animation: none;
+}
+
+.fog--front::before {
+  background-size: 960px 100%;
+  -webkit-mask-size: 960px 100%;
+  mask-size: 960px 100%;
+  filter: blur(3px);
+  animation: fog-flow-right-front 96s linear -61s infinite normal;
+}
+
+/* Positive background-position always carries every bank slowly to the right.
+   Advancing exactly one tile width makes the infinite loop seamless. */
+@keyframes fog-flow-right-back {
+  from { background-position: 0 bottom; -webkit-mask-position: 0 bottom; mask-position: 0 bottom; }
+  to { background-position: 1152px bottom; -webkit-mask-position: 1152px bottom; mask-position: 1152px bottom; }
+}
+
+@keyframes fog-flow-right-front {
+  from { background-position: 0 bottom; -webkit-mask-position: 0 bottom; mask-position: 0 bottom; }
+  to { background-position: 960px bottom; -webkit-mask-position: 960px bottom; mask-position: 960px bottom; }
+}
+
+@media (max-width: 600px) {
+  .fog { height: 180px; opacity: .5; }
+  .fog--front { height: 150px; opacity: .32; }
+}
+
+/* This layer has explicitly requested slow motion, independent of other effects. */
+html[data-smoke-motion] .fog::before {
+  animation: fog-flow-right-back 128s linear -34s infinite normal !important;
+}
+html[data-smoke-motion] .fog--front::before {
+  animation: fog-flow-right-front 96s linear -61s infinite normal !important;
+}
+html[data-smoke-motion="playing"] .fog::before {
+  animation-play-state: running !important;
+}
+html[data-smoke-motion="paused"] .fog::before {
+  animation-play-state: paused !important;
+}

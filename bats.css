@@ -1,0 +1,25 @@
+.flying-bats {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  overflow: hidden;
+  pointer-events: none;
+}
+.living-bat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--bat-size);
+  height: calc(var(--bat-size) * .5625);
+  color: #080610;
+  opacity: 0;
+  transform-origin: center;
+  will-change: transform;
+  filter: drop-shadow(0 1px 1px rgb(188 172 241 / 18%));
+}
+.living-bat svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.living-bat .wing { fill: currentColor; stroke: #18101e; stroke-width: .7; stroke-linejoin: round; }
+.living-bat .body { fill: #09070f; }
+.living-bat .ear { fill: #0b0814; }
+.living-bat .eye { fill: #c6934c; opacity: .65; }
+@media (prefers-reduced-motion: reduce) { .flying-bats { display: none; } }
