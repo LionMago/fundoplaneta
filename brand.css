@@ -9,10 +9,10 @@
 }
 
 .brand {
-  /* Center of the internal 728 x 486 chat at y=148, shifted right by 50px. */
-  left: calc(50% + 50px);
+  /* Keep the title inside the message pane, before the visitors divider. */
+  left: calc(50% + 4px);
   top: min(391px, calc(100vh - 110px));
-  width: 330px;
+  width: 264px;
   transform: translate3d(-50%, -50%, 0);
   z-index: 10;
   isolation: isolate;
@@ -40,13 +40,13 @@
 .brand h1 span:first-child { color: #ffac31; }
 
 @media (min-width: 1600px) {
-  .brand { width: 352px; }
+  .brand { width: 280px; }
   .brand h1 { font-size: 64px; }
 }
 @media (max-width: 600px) {
   .brand {
-    left: calc(50% + 24px);
-    width: min(300px, calc(100vw - 62px));
+    left: calc(50% - 32px);
+    width: min(230px, calc(100vw - 100px));
   }
   .brand h1 {
     width: 100%;

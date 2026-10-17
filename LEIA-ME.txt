@@ -35,7 +35,8 @@ CSP frame-ancestors), ajuste a hospedagem para permitir incorporação no xat.
 
 LAYOUT E EFEITOS
   Composição responsiva com imagem centralizada e fundo cobrindo a janela.
-  O nome fica no centro do chat interno, deslocado 50 px para a direita.
+  O nome fica dentro da área principal de mensagens, antes da lista de visitantes.
+  A largura é de 264 px (280 px em telas grandes), com letras e linhas próximas.
   Referência: chat central de 728 × 486 px, começando em y=148 px.
   O título não tem subtítulo, menu, legenda ou mensagens de demonstração.
   A fumaça está separada da imagem de fundo. As duas camadas se movem
