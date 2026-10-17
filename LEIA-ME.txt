@@ -42,7 +42,8 @@ LAYOUT E EFEITOS
   A fumaça está separada da imagem de fundo. As duas camadas se movem
   continuamente apenas para a direita, a 9 e 10 px/s, sem voltar ou parar.
   Morcegos com asas articuladas, trajetórias curvas e variações de altura.
-  Nome maior na fonte Nosifer, com letras escorridas de Halloween e sem subtítulo.
+  Nome na fonte Nosifer, com sangue vermelho nas pontas e gotas animadas lentas.
+  As gotas ficam dentro do título e respeitam a preferência de movimento reduzido.
   Estrelas, brasas nas laterais e brilho discreto.
   Os efeitos pausam quando a aba fica oculta. Os demais efeitos respeitam
   a preferência de movimento reduzido; a fumaça lenta solicitada permanece

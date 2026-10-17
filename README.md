@@ -1,6 +1,6 @@
 # Planeta Reggae — Halloween
 
-Fundo animado para xatframe, com fumaça lenta para a direita e morcegos articulados.
+Fundo animado para xatframe, com fumaça lenta para a direita, morcegos articulados e letras pingando sangue.
 
 ## Publicar no GitHub Pages
 
@@ -28,3 +28,4 @@ Abra `index.html` ou `previa.html`. As duas páginas mostram somente o fundo.
 Nosifer e Creepster acompanham suas licenças SIL Open Font License na pasta `fonts/`.
 
 [Documentação de publicação](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
